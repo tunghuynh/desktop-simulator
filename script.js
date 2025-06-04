@@ -98,12 +98,14 @@ const dockIcons = document.querySelectorAll('.dock-icon[data-app]');
 let windowCount = 0;
 dockIcons.forEach(icon => {
   icon.addEventListener('click', () => {
-    const win = createWindow(icon.dataset.app);
+    icon.classList.add('bounce', 'active');
+    setTimeout(() => icon.classList.remove('bounce'), 500);
+    const win = createWindow(icon.dataset.app, icon);
     document.getElementById('desktop').appendChild(win);
   });
 });
 
-function createWindow(appName) {
+function createWindow(appName, dockIcon) {
   const win = document.createElement('div');
   win.className = 'window';
   win.style.top = (150 + windowCount * 20) + 'px';
@@ -119,7 +121,10 @@ function createWindow(appName) {
     <div class="content">${appName} window</div>
   `;
   const close = win.querySelector('.close');
-  close.addEventListener('click', () => win.remove());
+  close.addEventListener('click', () => {
+    win.remove();
+    if (dockIcon) dockIcon.classList.remove('active');
+  });
   makeDraggable(win, win.querySelector('.title-bar'));
   return win;
 }
