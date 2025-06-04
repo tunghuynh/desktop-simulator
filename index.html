@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>macOS Sonoma Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="desktop">
+        <div id="menu-bar">
+            <div id="apple" class="menu-item"></div>
+            <div id="app-menu" class="menu-item">Finder</div>
+            <div id="menu-items" class="menu-item">
+                <span>File</span>
+                <span>Edit</span>
+                <span>View</span>
+                <span>Go</span>
+                <span>Window</span>
+                <span>Help</span>
+            </div>
+            <div id="status-items">
+                <span id="wifi" class="status-icon">📶</span>
+                <span id="bluetooth" class="status-icon">🅱️</span>
+                <span id="battery" class="status-icon">🔋</span>
+                <span id="volume" class="status-icon">🔊</span>
+                <span id="spotlight" class="status-icon">🔍</span>
+                <span id="siri" class="status-icon">🎤</span>
+                <span id="control" class="status-icon">🕹</span>
+                <span id="clock" class="status-icon">00:00</span>
+            </div>
+        </div>
+        <div id="icons">
+            <div class="desktop-icon" draggable="true">💻<span>Macintosh HD</span></div>
+            <div class="desktop-icon" draggable="true">📁<span>Applications</span></div>
+            <div class="desktop-icon" draggable="true">📄<span>Documents</span></div>
+        </div>
+        <div id="dock">
+            <div class="dock-icon" data-app="finder">🖥</div>
+            <div class="dock-icon" data-app="safari">🌐</div>
+            <div class="dock-icon" data-app="mail">✉️</div>
+            <div class="dock-icon" data-app="messages">💬</div>
+            <div class="dock-icon" data-app="photos">🖼</div>
+            <div class="dock-icon" data-app="settings">⚙️</div>
+            <div class="dock-icon" id="trash">🗑</div>
+        </div>
+        <div id="apple-menu" class="dropdown hidden">
+            <ul>
+                <li id="about">About This Mac</li>
+                <li>System Settings...</li>
+                <li>App Store...</li>
+                <li>Recent Items</li>
+                <li>Force Quit...</li>
+                <li>Sleep</li>
+                <li>Restart...</li>
+                <li>Shut Down...</li>
+                <li>Lock Screen</li>
+                <li>Log Out...</li>
+            </ul>
+        </div>
+        <div id="about-dialog" class="window hidden">
+            <div class="title-bar">
+                <div class="control close"></div>
+                <div class="control minimize"></div>
+                <div class="control maximize"></div>
+                <span class="title">About This Mac</span>
+            </div>
+            <div class="content">
+                <p><strong>macOS Sonoma</strong></p>
+                <p>Version 14.0 (Simulated)</p>
+                <p>Processor: Virtual CPU</p>
+                <p>Memory: 4 GB</p>
+                <p>Serial Number: XXXXX</p>
+            </div>
+        </div>
+        <div id="spotlight-search" class="overlay hidden">
+            <input type="text" placeholder="Search...">
+            <div class="results"></div>
+        </div>
+        <div id="control-center" class="overlay hidden">
+            <h3>Control Center</h3>
+            <p>Wi-Fi</p>
+            <p>Bluetooth</p>
+            <p>Volume</p>
+            <p>Brightness</p>
+            <p>Do Not Disturb</p>
+        </div>
+        <div id="notification-center" class="overlay hidden">
+            <h3>Notifications</h3>
+            <p>Calendar</p>
+            <p>Weather</p>
+            <p>Notes</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
