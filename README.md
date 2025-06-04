@@ -8,6 +8,7 @@ This project provides a simple, pure HTML/CSS/JavaScript simulation of the macOS
 - Dock with magnification effect when hovering icons.
 - Basic windows with draggable title bars and close/minimize/maximize buttons.
 - Spotlight, Control Center and Notification Center overlays with blur and basic animations.
+
 - Sample application windows launched from the dock.
 
 Everything is implemented without any JavaScript frameworks. Only standard web technologies are used.
@@ -25,6 +26,7 @@ Simply open `index.html` in Chrome or Safari. No build step is required.
 
 ## Assets
 All visual elements are represented with emoji or CSS for simplicity. The default wallpaper lives in `assets/wallpaper.svg`. Feel free to replace it or add your own images inside the `assets/` directory and update the HTML/CSS accordingly.
+
 
 ## License
 This project is provided for educational purposes only and is not affiliated with Apple Inc.

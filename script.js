@@ -101,11 +101,13 @@ dockIcons.forEach(icon => {
     icon.classList.add('bounce', 'active');
     setTimeout(() => icon.classList.remove('bounce'), 500);
     const win = createWindow(icon.dataset.app, icon);
+
     document.getElementById('desktop').appendChild(win);
   });
 });
 
 function createWindow(appName, dockIcon) {
+
   const win = document.createElement('div');
   win.className = 'window';
   win.style.top = (150 + windowCount * 20) + 'px';
@@ -125,6 +127,7 @@ function createWindow(appName, dockIcon) {
     win.remove();
     if (dockIcon) dockIcon.classList.remove('active');
   });
+
   makeDraggable(win, win.querySelector('.title-bar'));
   return win;
 }

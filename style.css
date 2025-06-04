@@ -5,6 +5,7 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+
     user-select: none;
     overflow: hidden;
 }
@@ -14,6 +15,7 @@ html, body {
     height: 100%;
     position: relative;
     background: url("assets/wallpaper.svg") center/cover no-repeat fixed;
+
     color: #fff;
 }
 
@@ -26,6 +28,7 @@ html, body {
     height: 28px;
     background: rgba(0,0,0,0.35);
     backdrop-filter: blur(20px);
+
     display: flex;
     align-items: center;
     padding: 0 10px;
@@ -71,6 +74,7 @@ html, body {
     color: white;
     cursor: pointer;
     text-shadow: 0 1px 2px rgba(0,0,0,0.8);
+
 }
 .desktop-icon span {
     margin-top: 4px;
@@ -99,6 +103,7 @@ html, body {
     cursor: pointer;
     position: relative;
     transform-origin: bottom;
+
 }
 .dock-icon:hover {
     transform: scale(1.5);
@@ -131,6 +136,7 @@ html, body {
 .dock-icon.bounce {
     animation: bounce 0.5s;
 }
+
 
 /* Dropdown */
 .dropdown {
@@ -172,6 +178,7 @@ html, body {
     box-shadow: 0 4px 16px rgba(0,0,0,0.3);
     color: black;
     transition: opacity 0.2s, transform 0.2s;
+
 }
 .title-bar {
     display: flex;
@@ -189,6 +196,7 @@ html, body {
     border-radius: 50%;
     margin-right: 6px;
     cursor: pointer;
+
 }
 .control.close { background: #ff5f57; }
 .control.minimize { background: #ffbd2e; }
@@ -197,6 +205,7 @@ html, body {
     margin-left: 10px;
     font-weight: bold;
     flex: 1;
+
 }
 .content {
     padding: 10px;
@@ -215,6 +224,7 @@ html, body {
     color: black;
     z-index: 2000;
     box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+
 }
 #spotlight-search input {
     width: 300px;
